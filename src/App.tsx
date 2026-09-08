@@ -1,4 +1,7 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
+import { NetworkIndicator } from "./components/NetworkIndicator";
+import { useOfflineSync } from "./hooks/useOfflineSync";
+import { Toast, ToastType } from "./components/Toast";
 
 // ---- Types ----------------------------------------------------------------
 
@@ -659,13 +662,23 @@ function TaskBoardScreen() {
 
 // ---- Screen 3: My Tasks -------------------------------------------------
 
-function MyTasksScreen() {
+function MyTasksScreen({ sendDataOrQueue }: { sendDataOrQueue?: (url: string, method: 'POST'|'PUT'|'DELETE', body: any) => Promise<void> }) {
   const [tasks, setTasks] = useState(INITIAL_TASKS);
   const done = tasks.filter((t) => t.done).length;
   const pct = Math.round((done / tasks.length) * 100);
 
-  const toggle = (id: number) =>
+  const toggle = async (id: number) => {
+    const task = tasks.find(t => t.id === id);
+    if (!task) return;
+    
+    // Optimistic UI update
     setTasks((prev) => prev.map((t) => (t.id === id ? { ...t, done: !t.done } : t)));
+
+    // Simular el guardado de la tarea en backend o cola offline
+    if (sendDataOrQueue) {
+      await sendDataOrQueue(`/api/tasks/${id}`, 'PUT', { done: !task.done });
+    }
+  };
 
   return (
     <div style={{ flex: 1, display: "flex", flexDirection: "column", overflow: "hidden" }}>
@@ -991,6 +1004,7 @@ function PhoneFrame({
             }}
           >
             <StatusBar />
+            <NetworkIndicator />
             <div
               style={{
                 flex: 1,
@@ -1044,6 +1058,12 @@ function PhoneFrame({
 // ---- App ----------------------------------------------------------------
 
 export default function App() {
+  const [toast, setToast] = useState<{ msg: string; type: ToastType } | null>(null);
+  // useCallback evita que handleToast sea una nueva referencia en cada render,
+  // lo que causaría un loop infinito en el useEffect de useOfflineSync.
+  const handleToast = useCallback((msg: string, type: ToastType) => setToast({ msg, type }), []);
+  const { sendDataOrQueue } = useOfflineSync(handleToast);
+
   return (
     <div
       style={{
@@ -1176,9 +1196,17 @@ export default function App() {
           <TaskBoardScreen />
         </PhoneFrame>
         <PhoneFrame label="Mis Tareas" number="03">
-          <MyTasksScreen />
+          <MyTasksScreen sendDataOrQueue={sendDataOrQueue} />
         </PhoneFrame>
       </div>
+      
+      {toast && (
+        <Toast 
+          message={toast.msg} 
+          type={toast.type} 
+          onClose={() => setToast(null)} 
+        />
+      )}
     </div>
   );
 }
