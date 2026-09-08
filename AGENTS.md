@@ -1,41 +1,41 @@
 # figma-make-app
 
-React + Vite + Tailwind CSS project running inside Figma Make.
+Proyecto de React + Vite + Tailwind CSS ejecutándose dentro de Figma Make.
 
 ## Development Server
 
-A Vite development server is **already running** on `$PORT` (default 8443). You don't need to start it manually.
+Un servidor de desarrollo de Vite **ya se está ejecutando** en `$PORT` (por defecto 8443). No necesitas iniciarlo manualmente.
 
-- Preview URL: The user can access the running app through the preview panel
-- Hot reload: Changes to source files are reflected immediately
+- URL de vista previa: El usuario puede acceder a la aplicación en ejecución a través del panel de vista previa
+- Recarga en caliente: Los cambios en los archivos fuente se reflejan inmediatamente
 
 ## Project Structure
 
-This is the canonical project structure. Start with task-relevant files below. Only follow imports or inspect other files when required, when a documented path is missing, or when the repository contradicts this guide.
+Esta es la estructura canónica del proyecto. Comienza con los archivos relevantes para la tarea a continuación. Solo sigue las importaciones o inspecciona otros archivos cuando sea necesario, cuando falte una ruta documentada o cuando el repositorio contradiga esta guía.
 
-- `src/main.tsx` - React entrypoint; imports `src/index.css` and mounts `src/App.tsx` into the `#root` element
-- `src/App.tsx` - Primary application component and the usual starting point for UI work
-- `src/index.css` - Global CSS entrypoint and Tailwind CSS v4 import
-- `index.html` - Vite HTML shell containing the `#root` element and loading `src/main.tsx`
-- `package.json` - Project dependencies and the Vite build, development, preview, and formatting scripts
-- `vite.config.ts` - Vite configuration with React, Tailwind CSS v4, and Figma Make plugins plus the `@` alias for `src`
-- `.mise.toml` - Toolchain versions for Node.js and pnpm
+- `src/main.tsx` - Punto de entrada de React; importa `src/index.css` y monta `src/App.tsx` en el elemento `#root`
+- `src/App.tsx` - Componente principal de la aplicación y el punto de partida habitual para el trabajo de UI
+- `src/index.css` - Punto de entrada global de CSS e importación de Tailwind CSS v4
+- `index.html` - Plantilla HTML de Vite que contiene el elemento `#root` y carga `src/main.tsx`
+- `package.json` - Dependencias del proyecto y los scripts de construcción, desarrollo, vista previa y formateo de Vite
+- `vite.config.ts` - Configuración de Vite con los plugins de React, Tailwind CSS v4 y Figma Make, además del alias `@` para `src`
+- `.mise.toml` - Versiones del conjunto de herramientas para Node.js y pnpm
 
 ## Dependencies
 
-- Runtime: React 19 and React DOM 19
-- Styling: Tailwind CSS v4 with the `@tailwindcss/vite` plugin
-- Build tooling: Vite 8, TypeScript 5.7, and `@vitejs/plugin-react`
-- Formatting: oxfmt
+- Entorno de ejecución: React 19 y React DOM 19
+- Estilos: Tailwind CSS v4 con el plugin `@tailwindcss/vite`
+- Herramientas de construcción: Vite 8, TypeScript 5.7 y `@vitejs/plugin-react`
+- Formateo: oxfmt
 
 ## Styling
 
-This project uses **Tailwind CSS v4** through the `@tailwindcss/vite` plugin configured in `vite.config.ts`. `src/index.css` imports Tailwind with `@import 'tailwindcss';`. Use Tailwind utility classes directly in JSX and put global CSS or Tailwind v4 theme customization in `src/index.css`. This scaffold does not need a Tailwind config file or PostCSS config.
+Este proyecto utiliza **Tailwind CSS v4** a través del plugin `@tailwindcss/vite` configurado en `vite.config.ts`. `src/index.css` importa Tailwind con `@import 'tailwindcss';`. Usa las clases de utilidad de Tailwind directamente en el JSX y coloca el CSS global o la personalización del tema de Tailwind v4 en `src/index.css`. Esta estructura base no necesita un archivo de configuración de Tailwind ni de PostCSS.
 
-`src/main.tsx` imports `src/index.css`, so global font wiring belongs in `src/index.css`. Keep CSS `@import` statements first, then add any `@font-face` rules and font-family defaults there.
+`src/main.tsx` importa `src/index.css`, por lo que la configuración global de las fuentes debe ir en `src/index.css`. Mantén las declaraciones `@import` de CSS al principio, y luego añade cualquier regla `@font-face` y los valores predeterminados de `font-family` allí mismo.
 
 ## Code quality
 
-- Use double quotes for strings containing apostrophes (`"We're here to help"`), or escape them in single-quoted strings. An unescaped apostrophe in a single-quoted string breaks the build.
-- Ensure JSX tags are closed and braces are balanced.
-- Export components as default exports.
+- Usa comillas dobles para las cadenas de texto que contengan apóstrofos (`"We're here to help"`), o escápalos si usas comillas simples. Un apóstrofo no escapado en una cadena con comillas simples rompe la compilación.
+- Asegúrate de que las etiquetas JSX estén cerradas y las llaves estén balanceadas.
+- Exporta los componentes como exportaciones por defecto (default exports).
