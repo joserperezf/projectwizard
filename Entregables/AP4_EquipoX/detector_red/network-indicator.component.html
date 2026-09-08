@@ -1,0 +1,8 @@
+<!-- 
+  Mostramos el banner visual si la conexión se pierde.
+  Se utiliza async pipe para suscribirnos automáticamente al Observable.
+-->
+<div *ngIf="(isOnline$ | async) === false" class="offline-banner">
+  <ion-icon name="cloud-offline-outline"></ion-icon>
+  <span>Estás en modo offline. Los cambios se guardarán localmente.</span>
+</div>

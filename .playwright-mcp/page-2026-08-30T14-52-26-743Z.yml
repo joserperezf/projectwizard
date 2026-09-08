@@ -1,0 +1,165 @@
+- generic [ref=e3]:
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e7]: Diseño de Wireframes
+      - heading "ProjectWizard" [level=1] [ref=e8]
+      - paragraph [ref=e9]: Aplicación de gestión para desarrolladores · React Native · iOS
+    - generic [ref=e10]:
+      - generic [ref=e11]:
+        - generic [ref=e12]: "3"
+        - generic [ref=e13]: Pantallas
+      - generic [ref=e14]:
+        - generic [ref=e15]: 390×844
+        - generic [ref=e16]: Dimensiones
+      - generic [ref=e17]:
+        - generic [ref=e18]: ES
+        - generic [ref=e19]: Idioma
+  - generic [ref=e21]:
+    - generic [ref=e22]:
+      - generic [ref=e23]: "01"
+      - generic [ref=e26]:
+        - generic [ref=e27]:
+          - generic [ref=e28]: 9:41
+          - img [ref=e35]
+        - generic [ref=e44]:
+          - generic [ref=e45]:
+            - generic [ref=e46]:
+              - generic [ref=e47]: Pantalla 01
+              - generic [ref=e48]: ProjectWizard
+            - button [ref=e49] [cursor=pointer]:
+              - img [ref=e50]
+          - generic [ref=e54]:
+            - generic [ref=e55]: Proyecto Activo
+            - generic [ref=e56]: App Móvil v2.0
+            - generic [ref=e57]: Sprint 3 · 14 días restantes
+            - generic [ref=e58]:
+              - generic [ref=e59]: Progreso del Equipo
+              - generic [ref=e60]: 69%
+            - generic [ref=e63]:
+              - generic [ref=e64]: 12 completadas
+              - generic [ref=e65]: 20 total
+          - generic [ref=e66]:
+            - generic [ref=e67]: Equipo — 5 miembros
+            - generic [ref=e68]:
+              - generic [ref=e70]: AG
+              - generic [ref=e71]:
+                - generic [ref=e72]:
+                  - generic [ref=e73]: Ana García
+                  - generic [ref=e74]: 80%
+                - generic [ref=e75]: UX/UI
+            - generic [ref=e78]:
+              - generic [ref=e80]: JL
+              - generic [ref=e81]:
+                - generic [ref=e82]:
+                  - generic [ref=e83]: José López
+                  - generic [ref=e84]: 60%
+                - generic [ref=e85]: Frontend
+            - generic [ref=e88]:
+              - generic [ref=e90]: CR
+              - generic [ref=e91]:
+                - generic [ref=e92]:
+                  - generic [ref=e93]: Carlos Ruiz
+                  - generic [ref=e94]: 45%
+                - generic [ref=e95]: Backend
+            - generic [ref=e98]:
+              - generic [ref=e100]: MS
+              - generic [ref=e101]:
+                - generic [ref=e102]:
+                  - generic [ref=e103]: María Soto
+                  - generic [ref=e104]: 90%
+                - generic [ref=e105]: QA
+            - generic [ref=e108]:
+              - generic [ref=e110]: LM
+              - generic [ref=e111]:
+                - generic [ref=e112]:
+                  - generic [ref=e113]: Luis Mora
+                  - generic [ref=e114]: 70%
+                - generic [ref=e115]: Project Manager
+          - button "Ver Tablero" [ref=e119] [cursor=pointer]:
+            - text: Ver Tablero
+            - img [ref=e120]
+      - generic [ref=e124]: Dashboard
+    - generic [ref=e125]:
+      - generic [ref=e126]: "02"
+      - generic [ref=e129]:
+        - generic [ref=e130]:
+          - generic [ref=e131]: 9:41
+          - img [ref=e138]
+        - generic [ref=e147]:
+          - generic [ref=e148]:
+            - generic [ref=e149]:
+              - generic [ref=e150]: Pantalla 02
+              - generic [ref=e151]: Tablero
+            - button [ref=e152] [cursor=pointer]:
+              - img [ref=e153]
+          - generic [ref=e154]:
+            - button "Por Hacer" [ref=e155] [cursor=pointer]
+            - button "En Proceso" [ref=e156] [cursor=pointer]
+            - button "Hecho" [ref=e157] [cursor=pointer]
+          - generic [ref=e159]: 3 tareas · En Proceso
+          - generic [ref=e161]:
+            - generic [ref=e162]:
+              - generic [ref=e163]:
+                - generic [ref=e164]: Alta
+                - generic [ref=e165]: "#01"
+              - generic [ref=e166]: Implementar autenticación JWT
+              - generic [ref=e167]:
+                - generic [ref=e169]: CR
+                - generic [ref=e170]: Carlos Ruiz
+            - generic [ref=e171]:
+              - generic [ref=e172]:
+                - generic [ref=e173]: Media
+                - generic [ref=e174]: "#02"
+              - generic [ref=e175]: Componentes de navegación
+              - generic [ref=e176]:
+                - generic [ref=e178]: JL
+                - generic [ref=e179]: José López
+            - generic [ref=e180]:
+              - generic [ref=e181]:
+                - generic [ref=e182]: Baja
+                - generic [ref=e183]: "#03"
+              - generic [ref=e184]: Suite de pruebas E2E
+              - generic [ref=e185]:
+                - generic [ref=e187]: MS
+                - generic [ref=e188]: María Soto
+      - generic [ref=e191]: Tablero de Tareas
+    - generic [ref=e192]:
+      - generic [ref=e193]: "03"
+      - generic [ref=e196]:
+        - generic [ref=e197]:
+          - generic [ref=e198]: 9:41
+          - img [ref=e205]
+        - generic [ref=e214]:
+          - generic [ref=e215]:
+            - generic [ref=e216]: Pantalla 03
+            - generic [ref=e217]: Mis Tareas
+          - generic [ref=e219]:
+            - generic [ref=e220]: Bienvenido de nuevo,
+            - generic [ref=e221]: Hola, José
+            - generic [ref=e222]:
+              - generic [ref=e223]: Frontend
+              - text: Developer
+          - generic [ref=e225]:
+            - generic [ref=e226]:
+              - generic [ref=e227]: Progreso Diario
+              - generic [ref=e228]:
+                - text: "3"
+                - generic [ref=e229]: de 5 completadas
+            - generic [ref=e230]:
+              - generic [ref=e231]: "60"
+              - generic [ref=e232]: "%"
+          - generic [ref=e235]:
+            - generic [ref=e236]: Lista de Tareas
+            - generic [ref=e237]:
+              - generic [ref=e238] [cursor=pointer]:
+                - img [ref=e240]
+                - generic [ref=e243]: Implementar pantalla de dashboard
+              - generic [ref=e244] [cursor=pointer]:
+                - img [ref=e246]
+                - generic [ref=e249]: Crear componente TaskCard
+              - generic [ref=e250] [cursor=pointer]:
+                - img [ref=e252]
+                - generic [ref=e255]: Integrar API de autenticación
+              - generic [ref=e259] [cursor=pointer]: Añadir animaciones de transición
+              - generic [ref=e263] [cursor=pointer]: Revisión de código con equipo
+      - generic [ref=e266]: Mis Tareas
